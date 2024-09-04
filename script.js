@@ -31,29 +31,24 @@ function loco() {
 }
 
 loco()
-// Load images and fonts
-Promise.all([preloadImages('.tiles__line-img'), preloadFonts('rmd7deq')]).then(() => {
-    // Remove loader (loading class)
-    document.body.classList.remove('loading');
+function preloadImages(selector) {
+    return new Promise((resolve) => {
+        const images = document.querySelectorAll(selector);
+        let loaded = 0;
+        const totalImages = images.length;
 
-    // Initialize Locomotive Scroll only if the page is served over HTTP/HTTPS
-    if (window.location.protocol === "file:") {
-        // Simple fallback for smooth scroll
-        const scroll = {
-            scrollTo: (el) => {
-                el.scrollIntoView({ behavior: "smooth" });
-            }
-        };
-    } else {
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true
+        images.forEach((img) => {
+            const image = new Image();
+            image.src = img.style.backgroundImage.replace(/url\("|"\)/g, '');
+            image.onload = () => {
+                loaded++;
+                if (loaded === totalImages) {
+                    resolve();
+                }
+            };
         });
-
-        backtopEl.addEventListener('click', () => scroll.scrollTo(headerEl));
-    }
-});
-
+    });
+}
 
 
 // var tl = gsap.timeline({
