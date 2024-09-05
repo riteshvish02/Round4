@@ -1432,6 +1432,7 @@ p{
 #page12 .page12-bottom .bottom-part .bottom-text{
     text-align: center;
     font-family: gilroy;
+
 }
 #page12 .page12-bottom .bottom-part .bottom-text h6{
     font-size: 1.2vw;
@@ -1442,6 +1443,7 @@ p{
     font-weight: 100;
     font-size: 1.1vw;
     width: 20vw;
+	color: black;
 }
 #page12 .page12-bottom .bottom-part .bottom-text:nth-child(1){
     margin-top: -1.2vw;
