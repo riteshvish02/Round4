@@ -136,7 +136,7 @@ function canva2() {
             start: "top top",
             end: "bottom -500%",
             pin: true,
-            markers:true,
+            // markers:true,
             scrub: 2,
             scroller: "#main",
         }
@@ -365,7 +365,7 @@ gsap.to(path, {
         start: "top 50%",
         end: "top -100%",
         scrub: true,
-        markers: true, 
+        // markers: true, 
     }
 });
 }

@@ -877,6 +877,7 @@ html.has-scroll-dragging {
 }
 #page5 #faq{
     color: #fff;
+	font-size: 200px;
 }
 #page5 .p {
     width: 100%;
@@ -1230,7 +1231,7 @@ p{
 	}
 }
 .page-8{
-    height: 120vh;
+    height: 70vh;
     width: 100vw;
     padding: 2vw;
     display: flex;
@@ -1335,7 +1336,7 @@ p{
 #page12{
     height: 160vh;
     width: 100vw;
-    background-color: #E6DDCD;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
