@@ -44,9 +44,9 @@ body {
     gap: 2px;
     position: relative;
 }
-#loader video{
-	width: 30%;
-	height: 10vh;
+#loader img{
+	width: 25%;
+	height: 25%;
 	object-position: center;
 	object-fit: cover;
 }
