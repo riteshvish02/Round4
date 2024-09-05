@@ -193,6 +193,7 @@ canva2()
 
 var tl  =  gsap.timeline()
 tl
+
 .to("#loader #outsideloader #prog",{
     transform:"scaleY(1)",
      duration:1,
@@ -220,10 +221,13 @@ x:"-100%",
   },"e")
   .to("#loader",{
     display:"none",
-     duration:1,
+     duration:2,
   },"f")
 
-
+  .to("#nav",{
+   display:"flex",
+     duration:1,
+  },"g")
 // draggableImage.js
 
 function pg5() {
